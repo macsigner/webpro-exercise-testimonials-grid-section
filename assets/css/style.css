@@ -1,0 +1,94 @@
+/**
+ * Adjust box sizing on site.
+ */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/**
+ * Adjust font size for easier px to rem conversion.
+ */
+html {
+    font-size: 62.5%;
+}
+
+/**
+ * Side wide custom properties.
+ */
+:root {
+    --base-width-max-width: 120rem;
+    --base-width-side-margin: 2rem;
+
+    /* colors */
+    --color-black: #000;
+    --color-white: #FFF;
+
+    /* font-sizes */
+    --font-size-100: 1.8rem;
+}
+
+/**
+ * Remove annoying empty space below inline-block elements.
+ */
+img,
+[style*='inline-block' i],
+svg,
+canvas,
+picture {
+    vertical-align: middle;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: 1.6rem/1.6 sans-serif;
+}
+
+/**
+ * Sticky footer.
+ */
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+body > header,
+body > footer {
+    flex: 0 0 auto;
+}
+
+body > main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 auto;
+}
+
+/**
+ * Add base width to handle horizontal alignment.
+ */
+.base-width {
+    width: calc(100% - (2 * 2rem));
+    max-width: 120rem;
+    margin-right: auto;
+    margin-left: auto;
+}
