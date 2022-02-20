@@ -18,25 +18,22 @@ html {
  * Side wide custom properties.
  */
 :root {
-    --base-width-max-width: 120rem;
+    --base-width-max-width: 111rem;
     --base-width-side-margin: 2rem;
 
     /* colors */
-    --color-black: #000;
-    --color-white: hsla(0, 0%, 100%, var(--font-opacity));
-    --color-primary-moderate-violet: hsla(263, 55%, 52%, var(--font-opacity));
-    --color-primary-very-dark-grayish-blue: hsla(217, 19%, 35%, var(--font-opacity));
-    --color-primary-very-dark-blackish-blue: hsla(219, 29%, 14%, var(--font-opacity));
-    --color-neutral-light-gray: hsla(0, 0%, 81%, var(--font-opacity));
-    --color-neutral-light-grayish-blue: hsla(210, 46%, 95%, var(--font-opacity));
+    --color-black: rgb(0,0,0);
+    --color-white: hsl(0, 0%, 100%);
+    --color-primary-moderate-violet: hsl(263, 55%, 52%);
+    --color-primary-very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --color-primary-very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --color-neutral-light-gray: hsl(0, 0%, 81%);
+    --color-neutral-light-grayish-blue: hsl(210, 46%, 95%);
 
     /* font-sizes */
     --font-size-90: 1.4rem;
     --font-size-100: 1.8rem;
     --font-size-110: 2.2rem;
-
-    /* settings */
-    --font-opacity: 1;
 }
 
 /**
@@ -81,6 +78,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: var(--color-neutral-light-grayish-blue);
 }
 
 body > header,
@@ -99,16 +97,24 @@ body > main {
  * Add base width to handle horizontal alignment.
  */
 .base-width {
-    width: calc(100% - (2 * 2rem));
-    max-width: 120rem;
+    width: calc(100% - (2 * var(--base-width-side-margin)));
+    max-width: var(--base-width-max-width);
     margin-right: auto;
     margin-left: auto;
 }
 
 /**
- * Testimonial grid layout.
+ * Color scheme.
  */
 
+:root {
+    --color: var(--color-black);
+    --bg-color: var(--color-white);
+}
+
+/**
+ * Testimonial grid layout.
+ */
 .layout-testimonials {
     display: grid;
     grid-template-columns: repeat(4, minmax(10px, 1fr));
@@ -122,4 +128,40 @@ body > main {
 
 .layout-testimonials__item--v-span-2 {
     grid-row: span 2;
+}
+
+/**
+ * Testimonial tile.
+ */
+.tile-testimonial {
+    overflow: hidden;
+    padding: 2.4rem 3rem 3rem;
+    border-radius: 1rem;
+    color: var(--color);
+    background-color: var(--bg-color);
+}
+
+.tile-testimonial__header {
+    margin-bottom: 1.8rem;
+}
+
+.tile-testimonial__quote {
+    font-size: var(--font-size-100);
+}
+
+.tile-testimonial__quote > :first-child {
+    margin-top: 0;
+}
+
+.tile-testimonial__quote > :last-child {
+    margin-bottom: 0;
+}
+
+.tile-testimonial__quote-title {
+    margin-bottom: 2.4rem;
+    font-size: var(--font-size-110);
+}
+
+.tile-testimonial__quote-title ~ * {
+    opacity: 0.7;
 }
