@@ -22,7 +22,7 @@ html {
     --base-width-side-margin: 2rem;
 
     /* colors */
-    --color-black: rgb(0,0,0);
+    --color-black: rgb(0, 0, 0);
     --color-white: hsl(0, 0%, 100%);
     --color-primary-moderate-violet: hsl(263, 55%, 52%);
     --color-primary-very-dark-grayish-blue: hsl(217, 19%, 35%);
@@ -106,7 +106,6 @@ body > main {
 /**
  * Color scheme.
  */
-
 :root {
     --color: var(--color-black);
     --bg-color: var(--color-white);
@@ -122,12 +121,48 @@ body > main {
     grid-gap: 2.4rem 3rem;
 }
 
-.layout-testimonials__item--h-span-2  {
+.layout-testimonials__item--h-span-2 {
     grid-column: span 2;
 }
 
 .layout-testimonials__item--v-span-2 {
     grid-row: span 2;
+}
+
+/**
+ * Profile title.
+ */
+:root {
+    --meta-info-block-image-size: 2.8rem;
+}
+
+.meta-info-block {
+    display: flex;
+    align-items: center;
+}
+
+.meta-info-block__image {
+    overflow: hidden;
+    border-radius: 50%;
+    width: var(--meta-info-block-image-size);
+    height: var(--meta-info-block-image-size);
+    margin-right: 1.6rem;
+    border: solid 2px rgba(255, 255, 255, 0);
+}
+
+.meta-info-block__main {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: var(--font-size-90);
+}
+
+.meta-info-block__title {
+    display: block;
+    font-size: var(--font-size-100);
+}
+
+.meta-info-block__title ~ * {
+    opacity: .5;
 }
 
 /**
