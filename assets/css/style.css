@@ -141,6 +141,21 @@ body > main {
     background-color: var(--bg-color);
 }
 
+.tile-testimonial--highlight {
+    --color: var(--color-white);
+    --bg-color: var(--color-primary-moderate-violet);
+}
+
+.tile-testimonial--blueish {
+    --color: var(--color-white);
+    --bg-color: var(--color-primary-very-dark-grayish-blue);
+}
+
+.tile-testimonial--dark {
+    --color: var(--color-white);
+    --bg-color: var(--color-primary-very-dark-blackish-blue);
+}
+
 .tile-testimonial__header {
     margin-bottom: 1.8rem;
 }
