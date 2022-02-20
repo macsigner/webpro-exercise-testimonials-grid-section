@@ -23,10 +23,20 @@ html {
 
     /* colors */
     --color-black: #000;
-    --color-white: #FFF;
+    --color-white: hsla(0, 0%, 100%, var(--font-opacity));
+    --color-primary-moderate-violet: hsla(263, 55%, 52%, var(--font-opacity));
+    --color-primary-very-dark-grayish-blue: hsla(217, 19%, 35%, var(--font-opacity));
+    --color-primary-very-dark-blackish-blue: hsla(219, 29%, 14%, var(--font-opacity));
+    --color-neutral-light-gray: hsla(0, 0%, 81%, var(--font-opacity));
+    --color-neutral-light-grayish-blue: hsla(210, 46%, 95%, var(--font-opacity));
 
     /* font-sizes */
+    --font-size-90: 1.4rem;
     --font-size-100: 1.8rem;
+    --font-size-110: 2.2rem;
+
+    /* settings */
+    --font-opacity: 1;
 }
 
 /**
