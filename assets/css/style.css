@@ -31,9 +31,9 @@ html {
     --color-neutral-light-grayish-blue: hsl(210, 46%, 95%);
 
     /* font-sizes */
-    --font-size-90: 1.3rem;
+    --font-size-90: 1.1rem;
     --font-size-100: 1.3rem;
-    --font-size-110: 1.8rem;
+    --font-size-110: 1.9rem;
 }
 
 /**
@@ -149,7 +149,7 @@ body > main {
  * Profile title.
  */
 :root {
-    --meta-info-block-image-size: 2.8rem;
+    --meta-info-block-image-size: 3.2rem;
 }
 
 .meta-info-block {
@@ -188,6 +188,8 @@ body > main {
     overflow: hidden;
     padding: 2.4rem 3rem 3rem;
     border-radius: 1rem;
+    line-height: 1.4;
+    font-weight: 500;
     color: var(--color);
     background-color: var(--bg-color);
 }
@@ -225,6 +227,7 @@ body > main {
 }
 
 .tile-testimonial__quote-title {
-    margin-bottom: 2.4rem;
+    margin-bottom: 1.6rem;
     font-size: var(--font-size-110);
+    letter-spacing: .03em;
 }
