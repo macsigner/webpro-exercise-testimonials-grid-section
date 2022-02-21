@@ -197,11 +197,16 @@ body > main {
     font-weight: 500;
     color: var(--color);
     background-color: var(--bg-color);
+    box-shadow: 40px 60px 40px -40px rgba(0, 0, 0, .12);
 }
 
 .tile-testimonial--highlight {
     --color: var(--color-white);
     --bg-color: var(--color-primary-moderate-violet);
+
+    background-image: url('../../images/bg-pattern-quotation.svg');
+    background-position: top right 8rem;
+    background-repeat: no-repeat;
 }
 
 .tile-testimonial--blueish {
@@ -235,6 +240,6 @@ body > main {
 .tile-testimonial__quote-title {
     margin-bottom: 1.6rem;
     font-size: var(--font-size-110);
-    letter-spacing: .03em;
+    letter-spacing: .024em;
     line-height: 1.25;
 }
