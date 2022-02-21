@@ -36,6 +36,12 @@ html {
     --font-size-110: 1.9rem;
 }
 
+@media screen and (max-width: 37.5em) {
+    :root {
+        --base-width-side-margin: 2.4rem;
+    }
+}
+
 /**
  * Remove annoying empty space below inline-block elements.
  */
@@ -146,7 +152,7 @@ body > main {
     }
 }
 
-@media screen and (max-width: 37.5em){
+@media screen and (max-width: 37.5em) {
     .layout-testimonials {
         display: block;
     }
