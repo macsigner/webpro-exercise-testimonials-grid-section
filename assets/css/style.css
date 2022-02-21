@@ -140,6 +140,22 @@ body > main {
     grid-gap: 2.4rem 3rem;
 }
 
+@media screen and (max-width: 56.25em) {
+    .layout-testimonials {
+        grid-template-columns: repeat(2, minmax(10px, 1fr));
+    }
+}
+
+@media screen and (max-width: 37.5em){
+    .layout-testimonials {
+        display: block;
+    }
+
+    .layout-testimonials__item + .layout-testimonials__item {
+        margin-top: 2.4rem;
+    }
+}
+
 .layout-testimonials__item--h-span-2 {
     grid-column: span 2;
 }
